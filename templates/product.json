@@ -79,10 +79,10 @@
         "collapsible-row-3": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
+            "heading": "FAQ",
+            "icon": "clipboard",
             "content": "",
-            "page": ""
+            "page": "faq"
           }
         },
         "share": {
