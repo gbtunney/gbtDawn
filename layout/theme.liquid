@@ -81,6 +81,7 @@
         --media-shadow-horizontal-offset: {{ settings.media_shadow_horizontal_offset }}px;
         --media-shadow-vertical-offset: {{ settings.media_shadow_vertical_offset }}px;
         --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
+        --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
 
         --page-width: {{ settings.page_width | divided_by: 10 }}rem;
         --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
@@ -208,19 +209,7 @@
       document.documentElement.classList.add('shopify-design-mode');
     }
     </script>
-  
- <!--begin-boost-pfs-filter-css-->
-   
- <!--end-boost-pfs-filter-css-->
-
- 
-
- <!--begin-boost-pfs-filter-css-->
-   {% render 'boost-pfs-style' %}
- <!--end-boost-pfs-filter-css-->
-
- 
-</head>
+  </head>
 
   <body class="gradient">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -276,13 +265,5 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-  
- <!--begin-boost-pfs-js-->
-   
- <!--end-boost-pfs-js-->
-
- <!--begin-boost-pfs-js-->
-   {% render 'boost-pfs' %}
- <!--end-boost-pfs-js-->
-</body>
+  </body>
 </html>
